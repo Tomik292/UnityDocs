@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from learningSite import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+
+    #main page
+    # /
+    url(r'^$',
+       views.main,
+      name='main_page.html'),
 ]
